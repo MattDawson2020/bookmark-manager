@@ -7,6 +7,7 @@ Instructions
   * Create the databse using `CREATE DATABASE bookmark_manager;`
   * Use PQSL command `\c bookmark_manager;` to connect to the databse 
   * Run the commands saved in the migrations files to set up your database accordingly   
+  * Create a separate test database called bookmark_manager_test, using the same table listed in https://github.com/MattDawson2020/bookmark-manager/blob/master/db/migrations/01_create_bookmarks_table.sql
 
 User story part 1
 ----
