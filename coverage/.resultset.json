@@ -16,11 +16,11 @@
           null,
           1,
           1,
-          null,
+          1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null
@@ -46,8 +46,32 @@
           null,
           null
         ]
+      },
+      "/Users/mattdawson/Projects/bookmark-manager/spec/features/new_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1618939280
+    "timestamp": 1619013938
   }
 }
