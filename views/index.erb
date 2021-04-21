@@ -1,7 +1,11 @@
-<h2> Your saved bookmarks </h2>
+<h2>Your saved bookmarks</h2>
 
 <ul>
   <% @bookmarks.each do |bookmark| %>
-    <li><%= bookmark %> </li>
-  <% end%>
+  <li>
+    <a href="<%= bookmark.url %>">
+    <%= bookmark.title %>
+    </a>
+  </li>
+  <% end %>
 </ul>

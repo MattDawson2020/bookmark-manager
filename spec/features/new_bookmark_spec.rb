@@ -4,17 +4,10 @@ feature 'creating bookmarks' do
     click_button('Create new bookmark')
 
     fill_in('bookmark_url', with: 'http://makersacademy.com')
+    fill_in('title', with: 'Makers Academy')
     click_button('Submit')
 
-    expect(page).to have_content('http://makersacademy.com')
-  end
-
-  scenario 'we can create bookmark using the bookmark method' do
-    visit '/'
-    Bookmark.new_bookmark('http://amazon.com')
-    visit '/list'
-
-    expect(page).not_to have_content('error')
-    expect(page).to have_content(('http://amazon.com'))
+    expect(page).to have_link('Makers Academy', href: 'http://makersacademy.com')
   end
 end
+

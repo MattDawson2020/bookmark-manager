@@ -10,8 +10,8 @@ feature 'Listing bookmarks' do
     fill_database
     visit '/list'
 
-    expect(page).to have_content('http://www.google.com')
-    expect(page).to have_content('http://www.youtube.com')
-    expect(page).to have_content('http://www.netflix.com')
+    expect(page).to have_content('Google')
+    expect(page).to have_content('YouTube')
+    expect(page).to have_content('Netflix')
   end
 end
