@@ -14,7 +14,7 @@ feature 'Validating a bookmark' do
   scenario 'it allows valid urls to be added' do
     visit '/'
     click_button('Create new bookmark')
-    fill_in('bookmark_url', with: 'http://google.com')
+    fill_in('bookmark_url', with: 'http://www.google.com')
     fill_in('title', with: 'Google')
     click_button('Submit')
 
