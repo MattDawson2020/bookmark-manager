@@ -7,27 +7,24 @@ class BookmarkManager < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  # before do
-  #   @bookmark = Bookmark.instance
-  # end
-
   get '/' do
     erb(:home)
   end
 
-  get '/list' do
+  get '/bookmarks' do
     @bookmarks = Bookmark.all
     erb(:index)
   end
 
-  post '/list' do
+  post '/bookmarks' do
     Bookmark.new_bookmark(title: params[:title], url: params[:bookmark_url])
-    redirect '/list'
+    redirect '/bookmarks'
   end
 
-  get '/new' do
+  get '/bookmarks/new' do
     erb(:new)
   end
 
   run! if app_file == $0
+
 end

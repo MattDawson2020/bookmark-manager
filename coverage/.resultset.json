@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jasonrowsell/Projects/matt/bookmark-manager/spec/bookmark_spec.rb": {
+      "/Users/mattdawson/Projects/bookmark-manager/spec/bookmark_spec.rb": {
         "lines": [
           1,
           null,
@@ -38,7 +38,7 @@
           null
         ]
       },
-      "/Users/jasonrowsell/Projects/matt/bookmark-manager/spec/features/list_spec.rb": {
+      "/Users/mattdawson/Projects/bookmark-manager/spec/features/list_spec.rb": {
         "lines": [
           1,
           1,
@@ -59,7 +59,7 @@
           null
         ]
       },
-      "/Users/jasonrowsell/Projects/matt/bookmark-manager/spec/features/new_bookmark_spec.rb": {
+      "/Users/mattdawson/Projects/bookmark-manager/spec/features/new_bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -77,6 +77,6 @@
         ]
       }
     },
-    "timestamp": 1619023565
+    "timestamp": 1619087684
   }
 }

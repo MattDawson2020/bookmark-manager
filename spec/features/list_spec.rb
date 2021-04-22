@@ -8,7 +8,7 @@ feature 'Listing bookmarks' do
 
   scenario 'we can see our list' do
     fill_database
-    visit '/list'
+    visit '/bookmarks'
 
     expect(page).to have_content('Google')
     expect(page).to have_content('YouTube')

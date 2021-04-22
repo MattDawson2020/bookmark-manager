@@ -29,7 +29,7 @@ require 'features/web_helpers'
 
 Capybara.app = BookmarkManager
 
-# frozen_string_literal: true
+#frozen_string_literal: true
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
