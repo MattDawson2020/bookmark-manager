@@ -7,3 +7,7 @@ def fill_database  ####
     
   bookmarks = Bookmark.all
 end
+
+def set_test_article
+  Bookmark.new_bookmark(title: 'Test article', url: 'http://testarticle.com')
+end

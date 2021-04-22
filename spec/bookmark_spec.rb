@@ -21,13 +21,32 @@ describe Bookmark do
   end
 
   context '.new_bookmark' do
-    it 'creates a new bookmark' do
+    it 'can create a new bookmark' do
       bookmark = Bookmark.new_bookmark(title: 'Google', url: 'http://www.google.com')
 
       expect(bookmark.title).to eq 'Google'
       expect(bookmark.url).to eq 'http://www.google.com'
       expect(bookmark.id).not_to be_nil
       expect(bookmark).to be_instance_of Bookmark
+    end
+  end
+
+  context '.delete_bookmark' do
+    it 'can delete a bookmark' do
+      bookmark = Bookmark.new_bookmark(title: 'Google', url: 'http://www.google.com')
+
+      Bookmark.delete_bookmark(id: bookmark.id)
+      expect(Bookmark.all).to be_empty
+    end
+  end
+
+  context '.update_bookmark' do
+    it 'can edit a bookmark' do
+      bookmark = Bookmark.new_bookmark(title: 'Google', url: 'http://www.google.com')
+      expect(bookmark.title).to eq("Google")
+
+      new_bookmark = Bookmark.edit_bookmark(id: bookmark.id, title: "Netflix", url: "http://ww.netflix.com")
+      expect(new_bookmark.title).to eq("Netflix")
     end
   end
 end
