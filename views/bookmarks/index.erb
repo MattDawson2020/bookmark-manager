@@ -1,6 +1,6 @@
 <h2>Your saved bookmarks</h2>
 
-
+<%= flash[:notice] %>
 <ul>
   <% @bookmarks.each do |bookmark| %>
     <li class="bookmark" id="bookmark-<%= bookmark.id %>">

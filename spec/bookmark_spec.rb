@@ -29,6 +29,11 @@ describe Bookmark do
       expect(bookmark.id).not_to be_nil
       expect(bookmark).to be_instance_of Bookmark
     end
+
+    it 'can validate a bookmark' do
+      Bookmark.new_bookmark(title: 'This should fail', url: 'lolwut')
+      expect(Bookmark.all).to be_empty
+    end
   end
 
   context '.delete_bookmark' do
