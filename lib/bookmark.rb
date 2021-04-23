@@ -1,4 +1,5 @@
 require_relative 'database_connection'
+require_relative 'comment'
 require 'uri'
 
 class Bookmark
@@ -8,6 +9,10 @@ class Bookmark
     @id = id
     @title = title
     @url = url
+  end
+
+  def comments(comment = Comment)
+    comment.show(bookmark_id: id)
   end
 
   def self.all

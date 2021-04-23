@@ -2,7 +2,7 @@ require 'bookmark'
 
 describe Bookmark do
 
-  context '#all' do
+  context '.all' do
     it 'can list all bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 

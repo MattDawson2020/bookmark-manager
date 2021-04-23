@@ -3,7 +3,7 @@ feature 'creating bookmarks' do
     visit '/'
     click_button('Create new bookmark')
 
-    fill_in('bookmark_url', with: 'http://www.makersacademy.com')
+    fill_in('url', with: 'http://www.makersacademy.com')
     fill_in('title', with: 'Makers Academy')
     click_button('Submit')
 

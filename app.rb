@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sinatra/flash'
 require './lib/bookmark'
+require './lib/comment'
 require './database_connection_setup.rb'
 require 'uri'
 
@@ -22,8 +23,12 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    flash[:notice] = "Invalid url" unless Bookmark.new_bookmark(title: params[:title], url: params[:bookmark_url])
+    flash[:notice] = "Invalid url" unless Bookmark.new_bookmark(title: params[:title], url: params[:url])
     redirect '/bookmarks'
+  end
+
+  get '/bookmarks/new' do
+    erb(:'bookmarks/new')
   end
 
   delete '/bookmarks/:id' do
@@ -41,8 +46,14 @@ class BookmarkManager < Sinatra::Base
     redirect('/bookmarks')
   end
 
-  get '/bookmarks/new' do
-    erb(:'bookmarks/new')
+  get '/bookmarks/:id/comments/new' do
+    @bookmark_id = params[:id]
+    erb :'comments/new'
+  end
+
+  post '/bookmarks/:id/comments' do
+    Comment.create(bookmark_id: params[:id], text: params[:comment])
+    redirect '/bookmarks'
   end
 
   run! if app_file == $0
