@@ -1,3 +1,16 @@
+# Maker's Week 4: Weekly challenge
+This challenge was the fourth of my Maker's weekly challenges, coded in pairs with a randomised partner each day.
+This week is where I would say the difficulty noticeably stepped up, with database interactions being more complex than previous weeks.
+The learning objectives for this week were:
+
+* Built a simple web app with a database attached to allow permanence
+* Explain the basics of how databases work and how to use SQL to interact with them
+* Object Relational Mapping (ORM) and manually writing a SQL interface with ruby
+* RESTful routes
+
+
+
+
 # Bookmark Manager
 
 Instructions
